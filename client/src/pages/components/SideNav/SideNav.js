@@ -1,0 +1,184 @@
+import { useState, useEffect } from "react";
+import { ProSidebar, SidebarHeader } from "react-pro-sidebar";
+import { Button } from "reactstrap";
+import { FiArrowLeft, FiArrowRight } from "react-icons/fi";
+import "react-pro-sidebar/dist/css/styles.css";
+import DashLogo from "../../../app/assets/images/dashlogo.png"
+import './sideNav.css'
+import { Link, NavLink } from "react-router-dom";
+import Dropdown from 'react-bootstrap/Dropdown';
+import DropdownButton from 'react-bootstrap/DropdownButton';
+
+const Sidebar = () => {
+  const [dropdown, setDropdown] = useState([]);
+  const [menuCollapse, setMenuCollapse] = useState(false);
+
+  const menuIconClick = () => {
+    menuCollapse ? setMenuCollapse(false) : setMenuCollapse(true);
+  };
+
+
+  // useEffect(() => {
+  //   const getUsers = async () => {
+  //     const data = await getDocs(courseaEnrolledRef);
+  //     setDropdown(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+  //   };
+
+  //   getUsers();
+  // }, []);
+  return (
+    <div className={menuCollapse ? "sideNavCollapsed" : "sideNavOpend "}>
+      <ProSidebar
+        collapsed={menuCollapse} id='prosliderContainer' className="bg-transparent p-0">
+        <aside className="navbar-aside">
+          <div className="aside-top w-100">
+            <Link to="/dashboard" className="brand-wrap text-decoration-none">
+              <SidebarHeader className=" overflow-hidden">
+                <div className="logotext ">
+                  <div>
+                    {menuCollapse ? (
+                      <div className="col shadow d-block" id="DashboardLogo">
+                        <img src={DashLogo} className="w-100 h-100  ps-2 text-center overflow-hidden" />
+                      </div>
+                    ) : (
+                      <div
+                        className="col shadow overflow-hidden d-flex h-100 w-100"
+                        id="DashboardLogo"
+                      ><img src={DashLogo} className="openlogo overflow-hidden ps-2" />
+                        <h3 className="pt-3 pb-2 bolder overflow-hidden ">
+                          ashboard
+                        </h3>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              </SidebarHeader>
+            </Link>
+          </div>
+
+          <nav>
+            <ul className="menu-aside ps-3 pt-2 w-100" id="sideNavBtn">
+
+              <li className="menu-item ">
+                <NavLink
+                  activeClassName="active"
+                  className="menu-link text-light d-flex align-items-center"
+                  to="/dashactvity"
+                  exact={true}
+                >
+                  {menuCollapse ?
+                    <i className="
+                 material-icons ">dashboard</i> : <><i className="material-icons pe-3">dashboard</i><span className="text">Dashboard</span></>}
+                </NavLink>
+              </li>
+              
+              <li className="menu-item ">
+                <NavLink
+                  activeClassName="active"
+                  className="menu-link text-light d-flex align-items-center"
+                  to="/course"
+                  exact={true}
+                >
+                  {menuCollapse ?
+                    <span className="material-icons"> bookmark </span> : <><span className="material-icons me-3"> bookmark </span><span className="text">Course</span></>}
+                </NavLink>
+              </li>
+
+
+              <li className="menu-item ">
+                <NavLink
+                  activeClassName="active"
+                  className="menu-link text-light d-flex align-items-center"
+                  to="/event"
+                  exact={true}
+                >
+                  {menuCollapse ?
+                    <span className="material-icons">move_to_inbox</span> : <><span className="material-icons me-3">move_to_inbox</span><span className="text">Event</span></>}
+                </NavLink>
+              </li>
+              <li className="menu-item ">
+                <NavLink
+                  activeClassName="active"
+                  className="menu-link text-light d-flex align-items-center"
+                  to="/assessment"
+                  exact={true}
+                >
+                  {menuCollapse ?
+                    <span className="material-icons">event</span> : <><span className="material-icons me-3">event</span><span className="text">Asessment</span></>}
+                </NavLink>
+              </li>
+              <li className="menu-item ">
+                <NavLink
+                  activeClassName="active"
+                  className="menu-link text-light d-flex align-items-center"
+                  to="/resources"
+                  exact={true}
+                >
+                  {menuCollapse ?
+                    <span className="material-icons">move_to_inbox</span> : <><span className='material-icons me-3'>task</span><span className="text">Resources</span></>}
+                </NavLink>
+              </li>
+              {menuCollapse ? <h6
+                className="w-100  overflow-hidden ps-2  my-3"
+                id="acountDetailTx"
+                variant="white"
+              >Acc<br></br> Deti
+              </h6> : <h6 className="w-100 ps-3 my-3">Account Detial</h6>}
+              <li className="menu-item ">
+                <NavLink
+                  activeClassName="active"
+                  className="menu-link text-light d-flex align-items-center"
+                  to="/inbox"
+                  exact={true}
+                >
+                  {menuCollapse ?
+                    <span className="material-icons">library_books</span> : <><span className="material-icons me-3">library_books</span><span className="text">Inbox</span></>}
+                </NavLink>
+              </li>
+              <li className="menu-item">
+                <NavLink
+                  activeClassName="active"
+                  className="menu-link text-light d-flex align-items-center"
+                  to="/profile"
+                  exact={true}
+                >
+                  {menuCollapse ?
+                    <span className="material-icons">account_circle</span> : <><span className="material-icons me-3">account_circle</span><span className="text">Profile</span></>}
+                </NavLink>
+              </li>
+              <li className="menu-item mt-5">
+                <NavLink
+                  activeClassName="active"
+                  className="menu-link text-light d-flex align-items-center"
+                  to="/support"
+                  exact={true}
+                >
+                  {menuCollapse ?
+                    <span className="material-icons">help</span> : <><span className="material-icons me-3">help</span><span className="text">Support</span></>}
+                </NavLink>
+              </li>
+              <li className="menu-item ">
+                <NavLink
+                  activeClassName="active"
+                  className="menu-link text-light d-flex align-items-center"
+                  to="/"
+                  exact={true}
+                >
+                  {menuCollapse ?
+                    <span className="material-icons">logout</span> : <><span className="material-icons me-3">logout</span><span className="text">Log Out</span></>}
+                </NavLink>
+              </li>
+            </ul>
+            <br />
+            <br />
+          </nav>
+        </aside>
+      </ProSidebar>
+      <div className={menuCollapse ? "sidebarCloseToggler text-end pe-3 text-light py-1" : "sidebarOpenToggler text-end pe-3 text-light py-1"} onClick={menuIconClick}>
+        {menuCollapse ? <FiArrowRight /> : <FiArrowLeft />}
+      </div>
+    </div>
+  );
+};
+
+export default Sidebar;

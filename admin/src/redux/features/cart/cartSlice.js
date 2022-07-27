@@ -14,6 +14,31 @@ export const getCart = createAsyncThunk(
   }
 );
 
+// export const postCourse = createAsyncThunk(
+//   "courses/postCourse",
+//   async (course, { dispatch }) => {
+//     const response = await fetch(baseUrl + "courseEnrolled",{
+//       method: "POST",
+//       body: JSON.stringify(course),
+//       headers: { "Content-Type": "application/json" }
+//     });
+    
+
+//     if (!response.ok) {
+//       return Promise.reject(response.status);
+//     }
+//     const data = await response.json();
+//     addcourse(data);
+//   }
+// );
+
+// const initialState = {
+//   coursesArray: [],
+//   isLoading: true,
+//   errMsg: "",
+// };
+
+
 const cartSlice = createSlice({
   name: "cart",
   initialState: {

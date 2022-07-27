@@ -1,4 +1,4 @@
-exports.Products = [
+module.exports.Products = [
     {
       name: "Velcro Ballerinas For Gril (Pink)",
       image: "/image/6.png",

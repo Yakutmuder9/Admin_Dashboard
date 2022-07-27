@@ -1,16 +1,25 @@
-import React from 'react';
-import {Route} from 'react-router-dom'
-import { useNavigate } from "react-router-dom";
 
-const PrivateRoute = ({...rest}) => {
-  let navigate = useNavigate();
-    const auth = JSON.parse(localStorage.getItem('token'));
-    if (auth){
-        if (auth.token){
-          return <Route {...rest}/>
+import { useSelector } from "react-redux";
+import { Navigate, Route } from "react-router-dom";
+
+function PrivateRoute({ component: Component, ...rest }) {
+  const userLogin = useSelector((state) => state.userLogin);
+  const { userInfo } = userLogin;
+  return (
+    <Route 
+      {...rest}
+      component={(props) => {
+        const token = window.localStorage.getItem("userInfo");
+        if (userInfo && userInfo.isAdmin) {
+          return <Component {...props} />;
+        } else {
+          return <Navigate to={`/signin`} />;
         }
-    }
-  return navigate("/signin")
-};
+      }}
+    />
+  );
+}
 
 export default PrivateRoute;
+
+

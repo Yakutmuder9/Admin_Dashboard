@@ -7,6 +7,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    /* color: black!important; */
     /* font-family: "Oswald", sans-serif; */
 }
 
@@ -59,7 +60,8 @@
     width: 100vw;
     height: 100vh;
     overflow-x: hidden!important;
-    background: rgb(231, 235, 240);
+    /* background: rgb(231, 235, 240); */
+    background: #EBF3FF;
     /* background: #2E3B55; */
 }
 ::-webkit-scrollbar {
@@ -77,21 +79,5 @@
 }
 
 
-/* {
-  "cli": {
-    "version": ">= 0.55.1"
-  },
-  "build": {
-    "development": {
-      "developmentClient": true,
-      "distribution": "internal"
-    },
-    "preview": {
-      "distribution": "internal"
-    },
-    "production": {}
-  },
-  "submit": {
-    "production": {}
-  }
-} */
+
+
