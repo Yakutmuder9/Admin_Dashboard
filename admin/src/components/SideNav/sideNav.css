@@ -1,0 +1,114 @@
+.menu-aside a {
+  display: block;
+  text-decoration: none;
+}
+.menu-aside .menu-item {
+  margin-bottom: 5px;
+}
+.menu-aside .menu-item .icon {
+  color: #adb5bd;
+  margin-right: 10px;
+  font-size: 18px;
+}
+.menu-aside .active .icon {
+  color: aquamarine;
+}
+.menu-aside .active {
+  background-color: rgba(127, 255, 212, 0.267);
+}
+.menu-aside .menu-link {
+  padding: 10px;
+  color: #29335d;
+  border-radius: 0.3rem;
+  position: relative;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.menu-aside .menu-link .text {
+  vertical-align: middle;
+}
+.sideNavCollapsed{
+  height: 100vh;
+  width: 80px;
+  background-color: #565e65!important;
+}
+.sideNavOpend{
+  height: 100vh!important;
+  width: 250px!important;
+  z-index: 99;
+  background-color: #565e65!important;
+}
+.sideNavOpend{
+  height: 100vh;
+  width: 250px;
+  background-color: #565e65!important;
+}
+.sideNavCollapsed .pro-sidebar-inner{
+  background: transparent!important;
+  width: 70%;
+} 
+.sideNavOpend .pro-sidebar-inner{
+  background: transparent!important;
+  width: 68%;
+} 
+.sidebarToggler{
+  overflow: hidden!important;
+  width: 100%;
+  padding-bottom: 15px;
+  z-index: 99!important;
+}
+
+.openlogo{
+  padding-top:4px ;
+  width: 45px!important;
+  height: 45px!important;
+}
+.sidebarOpenToggler{  
+  background: rgba(57, 57, 57, 0.26);
+  border-top-right-radius: 16px;
+  border: 0.1px solid silver;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4.1px);
+  -webkit-backdrop-filter: blur(4.1px);
+  color: white !important;
+  position: absolute!important;
+  width:200px;
+  bottom: 5px;
+  box-shadow: -18px 5px 25px #1919688c !important;
+  z-index: 9999;
+  font-weight: bold;
+  font-size: 20px;
+  cursor: pointer;
+}
+.sidebarCloseToggler{
+  background: rgba(57, 57, 57, 0.26);
+  border-top-right-radius: 16px;
+  border: 0.1px solid silver;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4.1px);
+  -webkit-backdrop-filter: blur(4.1px);
+  color: white !important;
+  position: absolute!important;
+  width: 70px;
+  bottom: 5px;
+  box-shadow: -18px 5px 25px #1919688c !important;
+  z-index: 9999;
+  font-weight: bold;
+  font-size: 20px;
+  cursor: pointer;
+}
+.pro-sidebar-inner{
+  width: 100%!important;
+  overflow-y: scroll!important;
+}
+#DashboardLogo{
+  height: 100%;
+  display: flex;
+  align-items: center;
+  color: aquamarine;
+}
+#DashboardLogo img{
+  width: 45px!important;
+  height: 45px!important;
+}

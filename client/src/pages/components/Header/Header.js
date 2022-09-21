@@ -1,18 +1,21 @@
-import { FaBell, FaSistrix } from "react-icons/fa";
+import {  FaSistrix } from "react-icons/fa";
 import { Navbar, Nav, NavDropdown } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import './header.css'
+import './head.css'
 import { useAuthState } from "react-firebase-hooks/auth";
-
+import dropdown from "../../../app/assets/images/dropdown.png"
 import { auth } from "../../../Auth/firebase/firebase";
+import Badge from '@mui/material/Badge';
+import Stack from '@mui/material/Stack';
+import MailIcon from '@mui/icons-material/Mail'
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart'
+import { useSelector } from "react-redux";
 
 const Header = () => {
-  const [user] = useAuthState(auth);
   const urlLocation = window.location.pathname.substring(1);
-  
-// let fullName = user.displayName;
-// let shName = fullName.slice(0, 2);
-let shName = "Ya"
+  const { cartTotalQuantity } = useSelector((state) => state.cart);
+
+  let shName = "Ya"
 
   function capitalizeFirstLetter(e) {
     return e.charAt(0).toUpperCase() + e.slice(1);
@@ -29,7 +32,7 @@ let shName = "Ya"
         id="naveToggler"
       >
         <Navbar.Brand href="#home" id="navLogo">
-         <span >MyDashboard</span> 
+          <span >MyDashboard</span>
         </Navbar.Brand>
 
         <Navbar.Toggle
@@ -40,20 +43,22 @@ let shName = "Ya"
 
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto mt-4 bolder">
-            <Nav.Link href="/dashboard/">Dashboard</Nav.Link>
+
+            <Nav.Link href="/dashboard">Dashboard</Nav.Link>
             <Nav.Link href="event">Event</Nav.Link>
+            <Nav.Link href="Cart">Cart  <span className="bg-danger rounded-circle px-2 text-light ms-2">{cartTotalQuantity}</span></Nav.Link>
 
             <NavDropdown title="Courses" id="collasible-nav-dropdown">
-              <NavDropdown.Item href="courses">Bootstrap</NavDropdown.Item>
-              <NavDropdown.Item href="courses">React</NavDropdown.Item>
-              <NavDropdown.Item href="courses">Node Js</NavDropdown.Item>
+              <NavDropdown.Item href="newcourse">Bootstrap</NavDropdown.Item>
+              <NavDropdown.Item href="newcourse">React</NavDropdown.Item>
+              <NavDropdown.Item href="newcourse">Node Js</NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="courses">
+              <NavDropdown.Item href="newcourse">
                 Web Architecture
               </NavDropdown.Item>
             </NavDropdown>
 
-            <Nav.Link href="Inbox">Asessment</Nav.Link>
+            <Nav.Link href="Inbox">Inbox</Nav.Link>
             <Nav.Link href="resources">Resources</Nav.Link>
             <Nav.Link eventKey={2} href="/">
               Sign Out
@@ -69,7 +74,7 @@ let shName = "Ya"
         <div className=" w-100 d-flex justify-content-between align-items-center">
           <div aria-label="breadcrumb " className="d-lg-block d-none">
             <h5 className="font-weight-bolder text-dark overflow-hidden">
-               DashActivity
+              DashActivity
             </h5>
           </div>
 
@@ -87,18 +92,20 @@ let shName = "Ya"
                   placeholder="Type here..."
                 />
                 <span className="input-group-text text-body text-primary navSerchBtn">
-                  <FaSistrix aria-hidden="true" className="text-white"/>
+                  <FaSistrix aria-hidden="true" className="text-white" />
                 </span>
               </div>
             </div>
             <ul className="navbar-nav justify-content-end">
-              
 
-              <li className="nav-item px-3 d-flex align-items-center">
-                <a href="" className="nav-link text-body p-0">
-                  <FaBell className="fa fa-cog cursor-pointer text-white" id="setting" />
-                </a>
-              </li>
+
+              <Stack spacing={2} direction="row" className="mt-2 mx-1">
+                <Link to="inbox"><Badge badgeContent={4} color="secondary" className="cursor-pointer">
+                  <MailIcon color="action" />
+                </Badge></Link>
+                <Link to="cart"><Badge badgeContent={cartTotalQuantity} color="success" className="cursor-pointer"><ShoppingCartIcon color="action" />
+                </Badge></Link>
+              </Stack>
               <div className="d-flex px-3 h-100 align-items-end">
                 <span className="text-secondary pt-2">Hi! {shName} 🤚</span>
               </div>
@@ -106,9 +113,9 @@ let shName = "Ya"
                 <Link to="profile" className="h-100">
                   <img src='' alt="" className="profileImage" />
                 </Link>
-              </div> 
-              
-                
+              </div>
+
+
             </ul>
           </div>
         </div>

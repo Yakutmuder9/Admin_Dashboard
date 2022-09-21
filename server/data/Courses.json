@@ -1,0 +1,759 @@
+{
+  "courses": [
+    {
+      "name": "PostgreSQL for Everybody Specialization",
+      "image": "https://res.cloudinary.com/practicaldev/image/fetch/s--5NXiT3Hl--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/i/75uyvkb5753zwjxnvzms.jpg",
+      "elevation": 0,
+      "featured": false,
+      "cost": 75,
+      "description": "Learn to Design and Create Websites. Build a responsive and accessible web portfolio using HTML5, CSS3, and JavaScript.",
+      "outcome": "Skills you'll gain: HTMLAllCollection, CSS and Javascript foundamental",
+      "comments": [
+        {
+          "rating": 5,
+          "text": "What a magnificent view!",
+          "author": "Tinus Lorvaldes",
+          "date": "2018-10-25T16:30Z"
+        },
+        {
+          "rating": 3,
+          "text": "The campground was beautiful, but the bugs could bite sometimes.",
+          "author": "Brennen Ech",
+          "date": "2017-06-17T03:33Z"
+        },
+        {
+          "rating": 5,
+          "text": "I caught a world-record-breaking trout here on my last visit.",
+          "author": "McKenzie Sebastian",
+          "date": "2019-02-18T18:12Z"
+        },
+        {
+          "rating": 2,
+          "text": "A wonderful place to reconnect with nature.",
+          "author": "Jordan Runn",
+          "date": "2019-08-04T20:11Z"
+        },
+        {
+          "rating": 4,
+          "text": "The stars at night were a revelation!",
+          "author": "Ann Dabramov",
+          "date": "2018-07-23T19:44Z"
+        }
+      ]
+    },
+    {
+      "name": "Introduction to Web Development with HTML, CSS, JavaScript",
+      "image": "https://www.syncfusion.com/blogs/wp-content/uploads/2020/07/Top-6-Front-End-Web-Development-Tools-to-Increase-Your-Productivity-in-2020-1.jpg",
+      "elevation": 1,
+      "featured": false,
+      "cost": 45,
+      "description": "Want to take the first steps to become a Cloud Application Developer? This course will lead you through the languages.",
+      "outcome": "This course can be applied to multiple Specializations or Professional Certificates programs. Completing this course will count towards your learning in any of the following programs",
+      "comments": [
+        {
+          "rating": 5,
+          "text": "What a magnificent view!",
+          "author": "Tinus Lorvaldes",
+          "date": "2018-10-25T16:30Z"
+        },
+        {
+          "rating": 5,
+          "text": "The campground was beautiful, but the bugs could bite sometimes.",
+          "author": "Brennen Ech",
+          "date": "2017-06-17T03:33Z"
+        },
+        {
+          "rating": 5,
+          "text": "I caught a world-record-breaking trout here on my last visit.",
+          "author": "McKenzie Sebastian",
+          "date": "2019-02-18T18:12Z"
+        },
+        {
+          "rating": 4,
+          "text": "A wonderful place to reconnect with nature.",
+          "author": "Jordan Runn",
+          "date": "2019-08-04T20:11Z"
+        },
+        {
+          "rating": 4,
+          "text": "The stars at night were a revelation!",
+          "author": "Ann Dabramov",
+          "date": "2018-07-23T19:44Z"
+        }
+      ]
+    },
+    {
+      "name": "Basics of Web Development",
+      "image": "https://miro.medium.com/max/1400/1*3T7J7csXY8u36acofw5N8g.jpeg",
+      "elevation": 2,
+      "featured": false,
+      "cost": 65,
+      "description": "Learn to Design and Create Websites. Build a responsive and accessible web portfolio using HTML5, CSS3, and JavaScript",
+      "outcome": "Skills you'll gain: HTMLAllCollection, CSS and Javascript foundamental",
+      "comments": [
+        {
+          "rating": 5,
+          "text": "What a magnificent view!",
+          "author": "Tinus Lorvaldes",
+          "date": "2018-10-25T16:30Z"
+        },
+        {
+          "rating": 4,
+          "text": "The campground was beautiful, but the bugs could bite sometimes.",
+          "author": "Brennen Ech",
+          "date": "2017-06-17T03:33Z"
+        },
+        {
+          "rating": 5,
+          "text": "I caught a world-record-breaking trout here on my last visit.",
+          "author": "McKenzie Sebastian",
+          "date": "2019-02-18T18:12Z"
+        },
+        {
+          "rating": 5,
+          "text": "A wonderful place to reconnect with nature.",
+          "author": "Jordan Runn",
+          "date": "2019-08-04T20:11Z"
+        },
+        {
+          "rating": 4,
+          "text": "The stars at night were a revelation!",
+          "author": "Ann Dabramov",
+          "date": "2018-07-23T19:44Z"
+        }
+      ]
+    },
+
+
+
+    {
+      "name": "Introduction to HTML5",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXPwIHg-waN7hPtWmEEMiHZTgi_ybI-NiTso0PLmTLL1QlGgOp2exKVhLPNKrNS7V8HZw&usqp=CAU",
+      "elevation": 0,
+      "featured": false,
+      "cost": 85,
+      "description": "Learn to Design and Create Websites. Build a responsive and accessible web portfolio using HTML5, CSS3, and JavaScript",
+      "outcome": "Skills you'll gain: HTMLAllCollection, CSS and Javascript foundamental",
+      "comments": [
+        {
+          "rating": 5,
+          "text": "What a magnificent view!",
+          "author": "Tinus Lorvaldes",
+          "date": "2018-10-25T16:30Z"
+        },
+        {
+          "rating": 3,
+          "text": "The campground was beautiful, but the bugs could bite sometimes.",
+          "author": "Brennen Ech",
+          "date": "2017-06-17T03:33Z"
+        },
+        {
+          "rating": 5,
+          "text": "I caught a world-record-breaking trout here on my last visit.",
+          "author": "McKenzie Sebastian",
+          "date": "2019-02-18T18:12Z"
+        },
+        {
+          "rating": 2,
+          "text": "A wonderful place to reconnect with nature.",
+          "author": "Jordan Runn",
+          "date": "2019-08-04T20:11Z"
+        },
+        {
+          "rating": 4,
+          "text": "The stars at night were a revelation!",
+          "author": "Ann Dabramov",
+          "date": "2018-07-23T19:44Z"
+        }
+      ]
+    },
+    {
+      "name": "Java Programming: Solving Problems with Software",
+      "image": "https://miro.medium.com/max/1400/1*3T7J7csXY8u36acofw5N8g.jpeg",
+      "elevation": 1,
+      "featured": false,
+      "cost": 35,
+      "description": "You will write programs that access and transform websites, and other types of data. At the end you will build a program ",
+      "outcome": "Skills you'll gain: HTMLAllCollection, CSS and Javascript foundamental",
+      "comments": [
+        {
+          "rating": 5,
+          "text": "What a magnificent view!",
+          "author": "Tinus Lorvaldes",
+          "date": "2018-10-25T16:30Z"
+        },
+        {
+          "rating": 3,
+          "text": "The campground was beautiful, but the bugs could bite sometimes.",
+          "author": "Brennen Ech",
+          "date": "2017-06-17T03:33Z"
+        },
+        {
+          "rating": 5,
+          "text": "I caught a world-record-breaking trout here on my last visit.",
+          "author": "McKenzie Sebastian",
+          "date": "2019-02-18T18:12Z"
+        },
+        {
+          "rating": 2,
+          "text": "A wonderful place to reconnect with nature.",
+          "author": "Jordan Runn",
+          "date": "2019-08-04T20:11Z"
+        },
+        {
+          "rating": 4,
+          "text": "The stars at night were a revelation!",
+          "author": "Ann Dabramov",
+          "date": "2018-07-23T19:44Z"
+        }
+      ]
+    },
+    {
+      "name": "Web Applications for Everybody Specialization",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDGn6I9_5a8bBcx7nT-RLON_PWxaTihd1tyVZNNGA7Xuwo-GdV6pO7rfpVCLVbjto5hZ8&usqp=CAU",
+      "elevation": 2,
+      "featured": false,
+      "cost": 49,
+      "description": "Learn to Design and Create Websites. Build a responsive and accessible web portfolio using HTML5, CSS3, and JavaScript.",
+      "outcome": "Skills you'll gain: HTMLAllCollection, CSS and Javascript foundamental",
+      "comments": [
+        {
+          "rating": 5,
+          "text": "What a magnificent view!",
+          "author": "Tinus Lorvaldes",
+          "date": "2018-10-25T16:30Z"
+        },
+        {
+          "rating": 3,
+          "text": "The campground was beautiful, but the bugs could bite sometimes.",
+          "author": "Brennen Ech",
+          "date": "2017-06-17T03:33Z"
+        },
+        {
+          "rating": 5,
+          "text": "I caught a world-record-breaking trout here on my last visit.",
+          "author": "McKenzie Sebastian",
+          "date": "2019-02-18T18:12Z"
+        },
+        {
+          "rating": 2,
+          "text": "A wonderful place to reconnect with nature.",
+          "author": "Jordan Runn",
+          "date": "2019-08-04T20:11Z"
+        },
+        {
+          "rating": 4,
+          "text": "The stars at night were a revelation!",
+          "author": "Ann Dabramov",
+          "date": "2018-07-23T19:44Z"
+        }
+      ]
+    },
+
+
+
+    {
+      "name": "Javascript Mastery",
+      "image": "https://res.cloudinary.com/practicaldev/image/fetch/s--5NXiT3Hl--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/i/75uyvkb5753zwjxnvzms.jpg",
+      "elevation": 0,
+      "featured": false,
+      "cost": 99,
+      "description": "Learn to Design and Create Websites. Build a responsive and accessible web portfolio using HTML5, CSS3, and JavaScript.",
+      "outcome": "Skills you'll gain: HTMLAllCollection, CSS and Javascript foundamental",
+      "comments": [
+        {
+          "rating": 5,
+          "text": "What a magnificent view!",
+          "author": "Tinus Lorvaldes",
+          "date": "2018-10-25T16:30Z"
+        },
+        {
+          "rating": 3,
+          "text": "The campground was beautiful, but the bugs could bite sometimes.",
+          "author": "Brennen Ech",
+          "date": "2017-06-17T03:33Z"
+        },
+        {
+          "rating": 5,
+          "text": "I caught a world-record-breaking trout here on my last visit.",
+          "author": "McKenzie Sebastian",
+          "date": "2019-02-18T18:12Z"
+        },
+        {
+          "rating": 2,
+          "text": "A wonderful place to reconnect with nature.",
+          "author": "Jordan Runn",
+          "date": "2019-08-04T20:11Z"
+        },
+        {
+          "rating": 4,
+          "text": "The stars at night were a revelation!",
+          "author": "Ann Dabramov",
+          "date": "2018-07-23T19:44Z"
+        }
+      ]
+    },
+    {
+      "name": "Object Oriented Programming in Java Specialization",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSb7FnQ4ZD7BZLm8Gkhx6gy8eS3yHK57la9kg&usqp=CAU",
+      "elevation": 1,
+      "featured": false,
+      "cost": 50,
+      "description": "Grow Your Portfolio as a Software Engineer. With some programming experience in at least one other programming language.",
+      "outcome": "Skills you'll gain: HTMLAllCollection, CSS and Javascript foundamental",
+      "comments": [
+        {
+          "rating": 5,
+          "text": "What a magnificent view!",
+          "author": "Tinus Lorvaldes",
+          "date": "2018-10-25T16:30Z"
+        },
+        {
+          "rating": 3,
+          "text": "The campground was beautiful, but the bugs could bite sometimes.",
+          "author": "Brennen Ech",
+          "date": "2017-06-17T03:33Z"
+        },
+        {
+          "rating": 5,
+          "text": "I caught a world-record-breaking trout here on my last visit.",
+          "author": "McKenzie Sebastian",
+          "date": "2019-02-18T18:12Z"
+        },
+        {
+          "rating": 2,
+          "text": "A wonderful place to reconnect with nature.",
+          "author": "Jordan Runn",
+          "date": "2019-08-04T20:11Z"
+        },
+        {
+          "rating": 4,
+          "text": "The stars at night were a revelation!",
+          "author": "Ann Dabramov",
+          "date": "2018-07-23T19:44Z"
+        }
+      ]
+    },
+    {
+      "name": "Google UX Design Professional Certificate",
+      "image": "https://www.codingdojo.com/blog/wp-content/uploads/19_best-courses_blog_600x341.jpg",
+      "elevation": 2,
+      "featured": false,
+      "cost": 9,
+      "description": "Learn to Design and Create Websites. Build a responsive and accessible web portfolio using HTML5, CSS3, and JavaScript.",
+      "outcome": "Skills you'll gain: HTMLAllCollection, CSS and Javascript foundamental",
+      "comments": [
+        {
+          "rating": 5,
+          "text": "What a magnificent view!",
+          "author": "Tinus Lorvaldes",
+          "date": "2018-10-25T16:30Z"
+        },
+        {
+          "rating": 3,
+          "text": "The campground was beautiful, but the bugs could bite sometimes.",
+          "author": "Brennen Ech",
+          "date": "2017-06-17T03:33Z"
+        },
+        {
+          "rating": 5,
+          "text": "I caught a world-record-breaking trout here on my last visit.",
+          "author": "McKenzie Sebastian",
+          "date": "2019-02-18T18:12Z"
+        },
+        {
+          "rating": 2,
+          "text": "A wonderful place to reconnect with nature.",
+          "author": "Jordan Runn",
+          "date": "2019-08-04T20:11Z"
+        },
+        {
+          "rating": 4,
+          "text": "The stars at night were a revelation!",
+          "author": "Ann Dabramov",
+          "date": "2018-07-23T19:44Z"
+        }
+      ]
+    },
+
+
+
+
+    {
+      "name": "PGoogle Data Analytics Professional Certificate",
+      "image": "https://www.codespot.org/assets/cover/web-development-courses.jpg",
+      "elevation": 0,
+      "featured": false,
+      "cost": 17,
+      "description": "Learn to Design and Create Websites. Build a responsive and accessible web portfolio using HTML5, CSS3, and JavaScript.",
+      "outcome": "Skills you'll gain: HTMLAllCollection, CSS and Javascript foundamental",
+      "comments": [
+        {
+          "rating": 5,
+          "text": "What a magnificent view!",
+          "author": "Tinus Lorvaldes",
+          "date": "2018-10-25T16:30Z"
+        },
+        {
+          "rating": 3,
+          "text": "The campground was beautiful, but the bugs could bite sometimes.",
+          "author": "Brennen Ech",
+          "date": "2017-06-17T03:33Z"
+        },
+        {
+          "rating": 5,
+          "text": "I caught a world-record-breaking trout here on my last visit.",
+          "author": "McKenzie Sebastian",
+          "date": "2019-02-18T18:12Z"
+        },
+        {
+          "rating": 2,
+          "text": "A wonderful place to reconnect with nature.",
+          "author": "Jordan Runn",
+          "date": "2019-08-04T20:11Z"
+        },
+        {
+          "rating": 4,
+          "text": "The stars at night were a revelation!",
+          "author": "Ann Dabramov",
+          "date": "2018-07-23T19:44Z"
+        }
+      ]
+    },
+    {
+      "name": "Google Data Analytics Professional Certificate",
+      "image": "https://www.codespot.org/assets/cover/web-development-courses.jpg",
+      "elevation": 1,
+      "featured": false,
+      "cost": 32,
+      "description": "Learn to Design and Create Websites. Build a responsive and accessible web portfolio using HTML5, CSS3, and JavaScript.",
+      "outcome": "Skills you'll gain: HTMLAllCollection, CSS and Javascript foundamental",
+      "comments": [
+        {
+          "rating": 5,
+          "text": "What a magnificent view!",
+          "author": "Tinus Lorvaldes",
+          "date": "2018-10-25T16:30Z"
+        },
+        {
+          "rating": 3,
+          "text": "The campground was beautiful, but the bugs could bite sometimes.",
+          "author": "Brennen Ech",
+          "date": "2017-06-17T03:33Z"
+        },
+        {
+          "rating": 5,
+          "text": "I caught a world-record-breaking trout here on my last visit.",
+          "author": "McKenzie Sebastian",
+          "date": "2019-02-18T18:12Z"
+        },
+        {
+          "rating": 2,
+          "text": "A wonderful place to reconnect with nature.",
+          "author": "Jordan Runn",
+          "date": "2019-08-04T20:11Z"
+        },
+        {
+          "rating": 4,
+          "text": "The stars at night were a revelation!",
+          "author": "Ann Dabramov",
+          "date": "2018-07-23T19:44Z"
+        }
+      ]
+    },
+    {
+      "name": "Basics of Web Development",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSf109wdEPscuwcq-K6Ir__feBLc1gFMnNMDA&usqp=CAU",
+      "elevation": 2,
+      "featured": false,
+      "cost": 89,
+      "description": "Learn to Design and Create Websites. Build a responsive and accessible web portfolio using HTML5, CSS3, and JavaScript.",
+      "outcome": "Skills you'll gain: HTMLAllCollection, CSS and Javascript foundamental",
+      "comments": [
+        {
+          "rating": 5,
+          "text": "What a magnificent view!",
+          "author": "Tinus Lorvaldes",
+          "date": "2018-10-25T16:30Z"
+        },
+        {
+          "rating": 3,
+          "text": "The campground was beautiful, but the bugs could bite sometimes.",
+          "author": "Brennen Ech",
+          "date": "2017-06-17T03:33Z"
+        },
+        {
+          "rating": 5,
+          "text": "I caught a world-record-breaking trout here on my last visit.",
+          "author": "McKenzie Sebastian",
+          "date": "2019-02-18T18:12Z"
+        },
+        {
+          "rating": 2,
+          "text": "A wonderful place to reconnect with nature.",
+          "author": "Jordan Runn",
+          "date": "2019-08-04T20:11Z"
+        },
+        {
+          "rating": 4,
+          "text": "The stars at night were a revelation!",
+          "author": "Ann Dabramov",
+          "date": "2018-07-23T19:44Z"
+        }
+      ]
+    },
+
+
+
+    {
+      "name": "IBM Full Stack Software Developer Professional Certificate",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5lT8ehTwfRIvsAtE6iXRpq-5TdSGSsM9E1Ov4mLQ82lD8rTlvZCET5XwtD9f10iWhS5Y&usqp=CAU",
+      "elevation": 0,
+      "featured": false,
+      "cost": 46,
+      "description": "Master Cloud Native and Full Stack Development using hands-on projects involving HTML, JavaScript and more. ",
+      "outcome": "Skills you'll gain: HTMLAllCollection, CSS and Javascript foundamental",
+      "comments": [
+        {
+          "rating": 5,
+          "text": "What a magnificent view!",
+          "author": "Tinus Lorvaldes",
+          "date": "2018-10-25T16:30Z"
+        },
+        {
+          "rating": 3,
+          "text": "The campground was beautiful, but the bugs could bite sometimes.",
+          "author": "Brennen Ech",
+          "date": "2017-06-17T03:33Z"
+        },
+        {
+          "rating": 5,
+          "text": "I caught a world-record-breaking trout here on my last visit.",
+          "author": "McKenzie Sebastian",
+          "date": "2019-02-18T18:12Z"
+        },
+        {
+          "rating": 2,
+          "text": "A wonderful place to reconnect with nature.",
+          "author": "Jordan Runn",
+          "date": "2019-08-04T20:11Z"
+        },
+        {
+          "rating": 4,
+          "text": "The stars at night were a revelation!",
+          "author": "Ann Dabramov",
+          "date": "2018-07-23T19:44Z"
+        }
+      ]
+    },
+    {
+      "name": "Specialization Web Development",
+      "image": "https://i2.wp.com/www.learnsteps.com/wp-content/uploads/2017/12/apis.png?fit=722%2C449&ssl=1",
+      "elevation": 1,
+      "featured": false,
+      "cost": 60,
+      "description": "earn to Design and Create Websites. Build a responsive and accessible web portfolio using HTML5, CSS3, and JavaScript.",
+      "outcome": "Skills you'll gain: HTMLAllCollection, CSS and Javascript foundamental",
+      "comments": [
+        {
+          "rating": 5,
+          "text": "What a magnificent view!",
+          "author": "Tinus Lorvaldes",
+          "date": "2018-10-25T16:30Z"
+        },
+        {
+          "rating": 3,
+          "text": "The campground was beautiful, but the bugs could bite sometimes.",
+          "author": "Brennen Ech",
+          "date": "2017-06-17T03:33Z"
+        },
+        {
+          "rating": 5,
+          "text": "I caught a world-record-breaking trout here on my last visit.",
+          "author": "McKenzie Sebastian",
+          "date": "2019-02-18T18:12Z"
+        },
+        {
+          "rating": 2,
+          "text": "A wonderful place to reconnect with nature.",
+          "author": "Jordan Runn",
+          "date": "2019-08-04T20:11Z"
+        },
+        {
+          "rating": 4,
+          "text": "The stars at night were a revelation!",
+          "author": "Ann Dabramov",
+          "date": "2018-07-23T19:44Z"
+        }
+      ]
+    },
+    {
+      "name": "Introduction to Accessible Web Development",
+      "image": "https://miro.medium.com/max/1400/1*OYUijA9Q8o_U243FEdwjUA.jpeg",
+      "elevation": 2,
+      "featured": false,
+      "cost": 45,
+      "description": "You will learn how assistive technology interprets our web, semantic HTML in order to write more  interfaces.",
+      "outcome": "Skills you'll gain: HTMLAllCollection, CSS and Javascript foundamental",
+      "comments": [
+        {
+          "rating": 5,
+          "text": "What a magnificent view!",
+          "author": "Tinus Lorvaldes",
+          "date": "2018-10-25T16:30Z"
+        },
+        {
+          "rating": 3,
+          "text": "The campground was beautiful, but the bugs could bite sometimes.",
+          "author": "Brennen Ech",
+          "date": "2017-06-17T03:33Z"
+        },
+        {
+          "rating": 5,
+          "text": "I caught a world-record-breaking trout here on my last visit.",
+          "author": "McKenzie Sebastian",
+          "date": "2019-02-18T18:12Z"
+        },
+        {
+          "rating": 2,
+          "text": "A wonderful place to reconnect with nature.",
+          "author": "Jordan Runn",
+          "date": "2019-08-04T20:11Z"
+        },
+        {
+          "rating": 4,
+          "text": "The stars at night were a revelation!",
+          "author": "Ann Dabramov",
+          "date": "2018-07-23T19:44Z"
+        }
+      ]
+    },
+
+
+
+    {
+      "name": "Introduction to Accessible Web Development",
+      "image": "https://bs-uploads.toptal.io/blackfish-uploads/components/blog_post_page/content/cover_image_file/cover_image/687822/retina_1708x683_cover-react-context-api-4929b3703a1a7082d99b53eb1bbfc31f.png",
+      "elevation": 0,
+      "featured": false,
+      "cost": 25,
+      "description": "Introduction to Accessible Web Development",
+      "dicription": "Learn to Design and Create Websites. Build a responsive and web portfolio using HTML5, CSS3, and JavaScript.",
+      "outcome": "Skills you'll gain: HTMLAllCollection, CSS and Javascript foundamental",
+      "comments": [
+        {
+          "rating": 5,
+          "text": "What a magnificent view!",
+          "author": "Tinus Lorvaldes",
+          "date": "2018-10-25T16:30Z"
+        },
+        {
+          "rating": 3,
+          "text": "The campground was beautiful, but the bugs could bite sometimes.",
+          "author": "Brennen Ech",
+          "date": "2017-06-17T03:33Z"
+        },
+        {
+          "rating": 5,
+          "text": "I caught a world-record-breaking trout here on my last visit.",
+          "author": "McKenzie Sebastian",
+          "date": "2019-02-18T18:12Z"
+        },
+        {
+          "rating": 2,
+          "text": "A wonderful place to reconnect with nature.",
+          "author": "Jordan Runn",
+          "date": "2019-08-04T20:11Z"
+        },
+        {
+          "rating": 4,
+          "text": "The stars at night were a revelation!",
+          "author": "Ann Dabramov",
+          "date": "2018-07-23T19:44Z"
+        }
+      ]
+    },
+    {
+      "name": "Front-End Web Development with React",
+      "image": "https://frontendmasters.com/static-assets/learn/og-learning-path-vue.jpg",
+      "elevation": 1,
+      "featured": false,
+      "cost": 70,
+      "description": "This course is part of the Full-Stack Web Development with React Specialization.",
+      "outcome": "Skills you'll gain: HTMLAllCollection, CSS and Javascript foundamental",
+      "comments": [
+        {
+          "rating": 5,
+          "text": "What a magnificent view!",
+          "author": "Tinus Lorvaldes",
+          "date": "2018-10-25T16:30Z"
+        },
+        {
+          "rating": 3,
+          "text": "The campground was beautiful, but the bugs could bite sometimes.",
+          "author": "Brennen Ech",
+          "date": "2017-06-17T03:33Z"
+        },
+        {
+          "rating": 5,
+          "text": "I caught a world-record-breaking trout here on my last visit.",
+          "author": "McKenzie Sebastian",
+          "date": "2019-02-18T18:12Z"
+        },
+        {
+          "rating": 2,
+          "text": "A wonderful place to reconnect with nature.",
+          "author": "Jordan Runn",
+          "date": "2019-08-04T20:11Z"
+        },
+        {
+          "rating": 4,
+          "text": "The stars at night were a revelation!",
+          "author": "Ann Dabramov",
+          "date": "2018-07-23T19:44Z"
+        }
+      ]
+    },
+    {
+      "name": "Basics to Web Specialization ",
+      "image": "https://repository-images.githubusercontent.com/126577260/3c924980-61ac-11e9-8e4e-6e50e0cec366",
+      "elevation": 2,
+      "featured": false,
+      "cost": 67,
+      "description": "Learn to Design and Create Websites. Build a responsive and accessible web portfolio using HTML5, CSS3, and JavaScript.",
+      "outcome": "Skills you'll gain: HTMLAllCollection, CSS and Javascript foundamental",
+      "comments": [
+        {
+          "rating": 5,
+          "text": "What a magnificent view!",
+          "author": "Tinus Lorvaldes",
+          "date": "2018-10-25T16:30Z"
+        },
+        {
+          "rating": 3,
+          "text": "The campground was beautiful, but the bugs could bite sometimes.",
+          "author": "Brennen Ech",
+          "date": "2017-06-17T03:33Z"
+        },
+        {
+          "rating": 5,
+          "text": "I caught a world-record-breaking trout here on my last visit.",
+          "author": "McKenzie Sebastian",
+          "date": "2019-02-18T18:12Z"
+        },
+        {
+          "rating": 2,
+          "text": "A wonderful place to reconnect with nature.",
+          "author": "Jordan Runn",
+          "date": "2019-08-04T20:11Z"
+        },
+        {
+          "rating": 4,
+          "text": "The stars at night were a revelation!",
+          "author": "Ann Dabramov",
+          "date": "2018-07-23T19:44Z"
+        }
+      ]
+    }
+  ]
+}

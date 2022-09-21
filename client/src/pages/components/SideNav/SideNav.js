@@ -14,7 +14,7 @@ const Sidebar = () => {
   const [menuCollapse, setMenuCollapse] = useState(false);
 
   const menuIconClick = () => {
-    menuCollapse ? setMenuCollapse(false) : setMenuCollapse(true);
+     setMenuCollapse(!menuCollapse);
   };
 
 
@@ -61,10 +61,8 @@ const Sidebar = () => {
 
               <li className="menu-item ">
                 <NavLink
-                  activeClassName="active"
                   className="menu-link text-light d-flex align-items-center"
-                  to="/dashactvity"
-                  exact={true}
+                  to="/dashboard"
                 >
                   {menuCollapse ?
                     <i className="
@@ -74,10 +72,8 @@ const Sidebar = () => {
               
               <li className="menu-item ">
                 <NavLink
-                  activeClassName="active"
                   className="menu-link text-light d-flex align-items-center"
                   to="/course"
-                  exact={true}
                 >
                   {menuCollapse ?
                     <span className="material-icons"> bookmark </span> : <><span className="material-icons me-3"> bookmark </span><span className="text">Course</span></>}
@@ -87,10 +83,8 @@ const Sidebar = () => {
 
               <li className="menu-item ">
                 <NavLink
-                  activeClassName="active"
                   className="menu-link text-light d-flex align-items-center"
                   to="/event"
-                  exact={true}
                 >
                   {menuCollapse ?
                     <span className="material-icons">move_to_inbox</span> : <><span className="material-icons me-3">move_to_inbox</span><span className="text">Event</span></>}
@@ -98,10 +92,8 @@ const Sidebar = () => {
               </li>
               <li className="menu-item ">
                 <NavLink
-                  activeClassName="active"
                   className="menu-link text-light d-flex align-items-center"
                   to="/assessment"
-                  exact={true}
                 >
                   {menuCollapse ?
                     <span className="material-icons">event</span> : <><span className="material-icons me-3">event</span><span className="text">Asessment</span></>}
@@ -109,10 +101,8 @@ const Sidebar = () => {
               </li>
               <li className="menu-item ">
                 <NavLink
-                  activeClassName="active"
                   className="menu-link text-light d-flex align-items-center"
                   to="/resources"
-                  exact={true}
                 >
                   {menuCollapse ?
                     <span className="material-icons">move_to_inbox</span> : <><span className='material-icons me-3'>task</span><span className="text">Resources</span></>}
@@ -126,10 +116,8 @@ const Sidebar = () => {
               </h6> : <h6 className="w-100 ps-3 my-3">Account Detial</h6>}
               <li className="menu-item ">
                 <NavLink
-                  activeClassName="active"
                   className="menu-link text-light d-flex align-items-center"
                   to="/inbox"
-                  exact={true}
                 >
                   {menuCollapse ?
                     <span className="material-icons">library_books</span> : <><span className="material-icons me-3">library_books</span><span className="text">Inbox</span></>}
@@ -137,10 +125,8 @@ const Sidebar = () => {
               </li>
               <li className="menu-item">
                 <NavLink
-                  activeClassName="active"
                   className="menu-link text-light d-flex align-items-center"
                   to="/profile"
-                  exact={true}
                 >
                   {menuCollapse ?
                     <span className="material-icons">account_circle</span> : <><span className="material-icons me-3">account_circle</span><span className="text">Profile</span></>}
@@ -148,10 +134,8 @@ const Sidebar = () => {
               </li>
               <li className="menu-item mt-5">
                 <NavLink
-                  activeClassName="active"
                   className="menu-link text-light d-flex align-items-center"
                   to="/support"
-                  exact={true}
                 >
                   {menuCollapse ?
                     <span className="material-icons">help</span> : <><span className="material-icons me-3">help</span><span className="text">Support</span></>}
@@ -159,10 +143,8 @@ const Sidebar = () => {
               </li>
               <li className="menu-item ">
                 <NavLink
-                  activeClassName="active"
                   className="menu-link text-light d-flex align-items-center"
                   to="/"
-                  exact={true}
                 >
                   {menuCollapse ?
                     <span className="material-icons">logout</span> : <><span className="material-icons me-3">logout</span><span className="text">Log Out</span></>}

@@ -1,0 +1,22 @@
+{
+  "users": [
+    {
+      "firstname": "userone",
+      "lastname": "userone",
+      "admin": false,
+      "username": "userone"
+    },
+    {
+      "firstname": "usertwo",
+      "lastname": "usertwo",
+      "admin": false,
+      "username": "usertwo"
+    },
+    {
+      "firstname": "Ahmed",
+      "lastname": "Ahmed",
+      "admin": true,
+      "username": "Ahmed"
+    }
+  ]
+}

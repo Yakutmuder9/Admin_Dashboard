@@ -1,55 +1,33 @@
 import { configureStore } from "@reduxjs/toolkit";
-import coursesReducer  from "../features/courses/coursesSlice";
-import courseEnrolledReducer from "../features/courses/courseEnrolledSlice";
-import cartReducer from "../features/cart/cartSlice"
+import {
+  getCourseDetailsReducer,
+  getCoursesReducer,
+} from "../features/courses/CourseReducers";
+import {
+  userDetailsReducer,
+  userLoginReducer,
+  userRegisterReducer,
+  userUpdateProfileReducer,
+} from "../features/users/userReducers";
+import cartReducer  from "../features/cart/cartSlices";
 
 export const store = configureStore({
   reducer: {
-    courses: coursesReducer,
-    courseEnrolled: courseEnrolledReducer,
+    getCourses: getCoursesReducer,
+    getCourseDetails: getCourseDetailsReducer,
     cart: cartReducer,
+    // courseReviewCreate: courseCreateReviewReducer,
+    // userLogin: userLoginReducer,
+    // userRegister: userRegisterReducer,
+    // userDetails: userDetailsReducer,
+    // userUpdateProfile: userUpdateProfileReducer,
   },
 });
 
+// login
+const userInfoFromLocalStorage = localStorage.getItem("userInfo")
+  ? JSON.parse(localStorage.getItem("userInfo"))
+  : null;
 
 
 
-// import { configureStore, combineReducers } from "@reduxjs/toolkit";
-// import userReducer from "./userRedux";
-// import productReducer from "./productRedux";
-// import {
-//   persistStore,
-//   persistReducer,
-//   FLUSH,
-//   REHYDRATE,
-//   PAUSE,
-//   PERSIST,
-//   PURGE,
-//   REGISTER,
-// } from "redux-persist";
-// import storage from "redux-persist/lib/storage";
-
-// const persistConfig = {
-//   key: "root",
-//   version: 1,
-//   storage,
-// };
-
-// const rootReducer = combineReducers({
-//   user: userReducer,
-//   product: productReducer,
-// });
-
-// const persistedReducer = persistReducer(persistConfig, rootReducer);
-
-// export const store = configureStore({
-//   reducer: persistedReducer,
-//   middleware: (getDefaultMiddleware) =>
-//     getDefaultMiddleware({
-//       serializableCheck: {
-//         ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
-//       },
-//     }),
-// });
-
-// export let persistor = persistStore(store);

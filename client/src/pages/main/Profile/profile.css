@@ -3,7 +3,7 @@
     height: auto;
 }
 .firstProfileBox{
-  background-image: url(../../../app/assets/images/ProfileBack.png);
+  background: linear-gradient(89.93deg, #9AC0E2 2.92%, rgba(255, 255, 255, 0.94) 106.97%);
 }
 .profileTop{
     height: 13rem;
@@ -11,7 +11,7 @@
     align-items: center;
     justify-content: space-between;
     margin-bottom: 20px;
-    box-shadow: 3px 2px 5px rgb(57, 57, 58);
+    box-shadow: 1px 2px 3px rgb(57, 57, 58);
 }
 .addProBtn{
   transform: rotate(1deg);

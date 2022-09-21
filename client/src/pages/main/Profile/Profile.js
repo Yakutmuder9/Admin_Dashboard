@@ -1,7 +1,4 @@
 import "./profile.css";
-import P1 from "../../../app/assets/images/p1.jpg";
-import P2 from "../../../app/assets/images/p2.jpg";
-import P4 from "../../../app/assets/images/p4.jpg";
 import P3 from "../../../app/assets/images/p3.jpg";
 import P5 from "../../../app/assets/images/p5.jpg";
 import P6 from "../../../app/assets/images/p6.jpg";
@@ -17,12 +14,13 @@ import { auth } from "../../../Auth/firebase/firebase";
 import FacebookIcon from '@mui/icons-material/Facebook';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import InstagramIcon from '@mui/icons-material/Instagram';
+import Footer from "../../components/Footer/Footer"
 
 const Profile = () => {
   const [user] = useAuthState(auth);
 
   return (
-    <div className="profile w-100 h-auto px-3">
+    <div className="profile w-100 h-auto px-3 pb-3">
       <div className="container-fluid profileTop  d-flex justify-content-between firstProfileBox">
         <div className="d-flex align-items-center">
           <div className="profileImg ">
@@ -534,6 +532,7 @@ const Profile = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

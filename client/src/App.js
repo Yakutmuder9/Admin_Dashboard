@@ -1,4 +1,3 @@
-import React, { useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
 import SignIn from "./pages/SignIn";
@@ -8,6 +7,8 @@ import HomePage from "./pages/HomePage/HomePage";
 import ProtectedRoute from "./components/PrivateRoute";
 import Dashboard from "./pages/Dashboard";
 import Course from "./pages/main/course/Course"
+import Newcourse from "./pages/main/course/Newcourse/Newcourse"
+import NewcourseDetail from "./pages/main/course/Newcourse/SingleCourse"
 import Event from "./pages/main/event/Event"
 import Cart from "./pages/main/cart/Cart"
 import Profile from "./pages/main/Profile/Profile"
@@ -16,6 +17,8 @@ import Assessment from "./pages/main/assesment/Assessment"
 import Inbox from "./pages/main/Inbox/Inbox"
 import Dashactivity from "./pages/main/dashactive/DashActivity";
 import Support from "./pages/main/support/Support";
+import ResourcesDetail from "./pages/main/resources/ResourcesDetail";
+import Payment from "./pages/main/payment/payment";
 
 const App = () => {
 const user = 1;
@@ -35,7 +38,7 @@ const user = 1;
               }
             >
               <Route
-                path="dashactvity" 
+                path="dashboard" 
                 exact
                 element={
                   
@@ -52,10 +55,43 @@ const user = 1;
                 }
               />
               <Route
+                path="course/:id" 
+                element={
+                  
+                    <Course />
+                  
+                }
+              />
+              <Route
+                path="newcourse" 
+                element={
+                  
+                    <Newcourse />
+                  
+                }
+              />
+              <Route
+                path="newcourse/:id" 
+                element={
+                  
+                    <NewcourseDetail />
+                  
+                }
+              />
+              <Route
                 path="cart"
                 element={
                   
                     <Cart />
+                  
+                }
+              />
+
+              <Route
+                path="payment"
+                element={
+                  
+                    <Payment />
                   
                 }
               />
@@ -90,6 +126,14 @@ const user = 1;
                 
                     <Resources />
                  
+                }
+              />
+               <Route
+                path="resources/:id" 
+                element={
+                  
+                    <ResourcesDetail />
+                  
                 }
               />
               <Route
@@ -129,16 +173,6 @@ const user = 1;
           )}
         <Route path="*" element={<NotFound />}/>
 
-
-        {/* <PrivateRouter path="/dashboard" element={<SignUp />} /> */}
-        {/* 
-        <PrivateRouter path="/profile" component={ProfileScreen} />
-        <Route path="/cart/:id?" component={CartScreen} />
-        <PrivateRouter path="/shipping" component={ShippingScreen} />
-        <PrivateRouter path="/payment" component={PaymentScreen} />
-        <PrivateRouter path="/placeorder" component={PlaceOrderScreen} />
-        <PrivateRouter path="/order/:id" component={OrderScreen} />
-        <Route path="*" component={NotFound} /> */}
       </Routes>
     </div>
   );

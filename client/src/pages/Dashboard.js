@@ -15,7 +15,7 @@ const Dashboard = () => {
             <Header />
           </div>
           <div className="w-100 dashMain">
-            <div className="w-100 dashOutlet px-4 py-3">
+            <div className="w-100 dashOutlet py-3">
               <Outlet />
             </div>
           </div>
