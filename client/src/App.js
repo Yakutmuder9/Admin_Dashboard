@@ -24,7 +24,7 @@ const App = () => {
   const user = 1;
   return (
     <div className="App">
-      <Routes>
+      <Routes>git add .
         <Route path="/" element={<HomePage />} />
         <Route path="signin" element={<SignIn />} />
         <Route path="signup" element={<SignUp />} />
