@@ -9,25 +9,26 @@ import web2022 from "../../../app/assets/images/web2022.png";
 import webapp from "../../../app/assets/images/webapp.png";
 import { FaPlus } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import { useAuthState } from "react-firebase-hooks/auth";
-import { auth } from "../../../Auth/firebase/firebase";
+// import { useAuthState } from "react-firebase-hooks/auth";
+// import { auth } from "../../../Auth/firebase/firebase";
 import FacebookIcon from '@mui/icons-material/Facebook';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import Footer from "../../components/Footer/Footer"
 
 const Profile = () => {
-  const [user] = useAuthState(auth);
+  // const [user] = useAuthState(auth);
 
   return (
     <div className="profile w-100 h-auto px-3 pb-3">
       <div className="container-fluid profileTop  d-flex justify-content-between firstProfileBox">
         <div className="d-flex align-items-center">
           <div className="profileImg ">
-            <img src={user.photoURL} alt="" className="profilePicture" />
+            <img src='' alt="" className="profilePicture" />
+            {/* <img src={user.photoURL} alt="" className="profilePicture" /> */}
           </div>
           <div>
-            <h4 className="ps-4 text-light">{user.displayName}</h4>
+            <h4 className="ps-4 text-light">Ya</h4>
             <p className="text-light ps-4">Student/ Full-Stack-Developer</p>
           </div>
         </div>

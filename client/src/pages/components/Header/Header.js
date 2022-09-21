@@ -2,9 +2,7 @@ import {  FaSistrix } from "react-icons/fa";
 import { Navbar, Nav, NavDropdown } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import './head.css'
-import { useAuthState } from "react-firebase-hooks/auth";
-import dropdown from "../../../app/assets/images/dropdown.png"
-import { auth } from "../../../Auth/firebase/firebase";
+import dropdown from "../../../app/assets/images/dropdown.png";
 import Badge from '@mui/material/Badge';
 import Stack from '@mui/material/Stack';
 import MailIcon from '@mui/icons-material/Mail'

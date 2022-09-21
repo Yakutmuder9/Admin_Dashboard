@@ -5,23 +5,25 @@ import Google from "../../app/assets/images/google.png";
 import { useNavigate } from "react-router-dom";
 import "./loginModal.css";
 import Button from "@mui/material/Button";
-import firebase from "firebase";
-import { useAuthState } from "react-firebase-hooks/auth";
-import { auth } from "../../Auth/firebase/firebase";
+// import firebase from "firebase";
+// import { useAuthState } from "react-firebase-hooks/auth";
+// import { auth } from "../../Auth/firebase/firebase";
 
 const LoginPage = () => {
-  const [user] = useAuthState(auth);
-  const navigate = useNavigate();
-  const [roller, setRoller] = useState(false);
-  const initialValues = { username: "", email: "", password: "" };
-  const [formValues, setFormValues] = useState(initialValues);
-  const [formErrors, setFormErrors] = useState({});
-  const [isSubmit, setIsSubmit] = useState(false);
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [error, setError] = useState("");
+  //   const [user] = useAuthState(auth);
+    const navigate = useNavigate();
+    const [roller, setRoller] = useState(false);
+    const initialValues = { username: "", email: "", password: "" };
+    const [formValues, setFormValues] = useState(initialValues);
+    const [formErrors, setFormErrors] = useState({});
+    const [isSubmit, setIsSubmit] = useState(false);
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const [error, setError] = useState("");
+   
 
-  const handleChange = (e) => {
+
+    const handleChange = (e) => {
     const { name, value } = e.target;
     setFormValues({ ...formValues, [name]: value });
   };
@@ -31,7 +33,7 @@ const LoginPage = () => {
       console.log(formValues);
     }
   }, [formErrors]);
-  const validate = (values) => {
+   const validate = (values) => {
     const errors = {};
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
 
@@ -74,24 +76,27 @@ const LoginPage = () => {
     }
   };
 
-  function signInWithGoogle() {
-    const provider = new firebase.auth.GoogleAuthProvider();
-    auth.signInWithPopup(provider);
-  }
+//   function signInWithGoogle() {
+//     const provider = new firebase.auth.GoogleAuthProvider();
+//     auth.signInWithPopup(provider);
+//   }
 
-  const handleGoogleSignIn = async (e) => {
-    e.preventDefault();
-    try {
-      await signInWithGoogle();
-      navigate("/dashboard");
-    } catch (error) {
-      console.log(error.message);
-    }
-  };
+//   const handleGoogleSignIn = async (e) => {
+//     e.preventDefault();
+//     try {
+//       await signInWithGoogle();
+//       navigate("/dashboard");
+//     } catch (error) {
+//       console.log(error.message);
+//     }
+//   };
+
+
 
   return (
     <>
-      <div
+       
+     <div
         className="row shadow-lg rounded-circle vw-100 vh-100"
         id="loginModal"
       >
@@ -338,18 +343,11 @@ const LoginPage = () => {
                 <Button
                   className="btn btn-primary  text-white w-100 py-2 px-5"
                   type="submit"
-                  onClick={handleGoogleSignIn}
+                  // onClick={handleGoogleSignIn}
                 >
                   <img alt="" src={Google} className="pe-2 mb-1" /> Continue
                   with Google{" "}
                 </Button>
-
-                {/* <button className="btn btn-primary  text-white w-100 py-2" type="submit"  
-                
-                onClick={handleGoogleSignIn}
-                >
-                 <img alt="" src={Google} className='pe-2 mb-1'/> Continue with Google
-                </button> */}
               </div>
             </form>
           </div>
@@ -360,3 +358,10 @@ const LoginPage = () => {
 };
 
 export default LoginPage;
+
+
+
+
+
+
+
