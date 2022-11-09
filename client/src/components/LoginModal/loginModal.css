@@ -68,14 +68,13 @@ form button {
 
 #signupSide {
   display: flex;
-  align-items: left;
+  align-items: center!important;
   justify-content: center;
-  border: 4px solid;
+  transform: translate(90%,0%);
 }
 
 #right-cont {
   height: 90%;
-  overflow: hidden;
 }
 
 #signupFirsttname,
@@ -95,15 +94,16 @@ form button {
   display: flex !important;
   flex-direction: column !important;
   align-items: center !important;
-  justify-content: center !important;
+  justify-content: start !important;
   padding: 0 5vw;
   overflow: visible !important;
   padding-bottom: 20vh;
   z-index: 12;
+  transform: translate(-100%, 0%);
 }
 #roller_text img {
   position: absolute;
-  margin-top: 68vh;
+  margin-top: 48vh;
   margin-left: 40vw;
   width: 60%;
 }
@@ -130,4 +130,19 @@ form button {
 
 .google_singin img {
   height: 20px;
+}
+
+
+@media(max-width: 1200px){
+  #right-cont{
+    width: 100%!important;
+
+  }
+  #signupSide{
+    width: 90%!important;
+    display: flex;
+    align-items: flex-end!important;
+    transform: translate(0%,0%);
+    padding: 5% 15%;
+  }
 }

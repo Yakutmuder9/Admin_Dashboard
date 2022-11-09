@@ -5,7 +5,6 @@ import App from "./App";
 import { store } from "./redux/store/store";
 import { Provider } from "react-redux";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap-social/bootstrap-social.css";
 import "font-awesome/css/font-awesome.css";
 
 const container = document.getElementById("root");

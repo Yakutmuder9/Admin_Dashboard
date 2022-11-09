@@ -1,152 +1,193 @@
-import {
-  USER_DETAILS_FAIL,
-  USER_DETAILS_REQUEST,
-  USER_DETAILS_RESET,
-  USER_DETAILS_SUCCESS,
-  USER_LOGIN_FAIL,
-  USER_LOGIN_REQUEST,
-  USER_LOGIN_SUCCESS,
-  USER_LOGOUT,
-  USER_REGISTER_FAIL,
-  USER_REGISTER_REQUEST,
-  USER_REGISTER_SUCCESS,
-  USER_UPDATE_PROFILE_FAIL,
-  USER_UPDATE_PROFILE_REQUEST,
-  USER_UPDATE_PROFILE_SUCCESS,
-} from "./UserContants";
 import axios from "axios";
+import { toast } from "react-toastify";
 
-// LOGIN
-export const login = (email, password) => async (dispatch) => {
-  try {
-    dispatch({ type: USER_LOGIN_REQUEST });
+const BACKEND_URL ='http://localhost:5000'
 
-    const config = {
-      headers: {
-        "Content-Type": "application/json",
-      },
-    };
-
-    const { data } = await axios.post(
-      `/api/users/login`,
-      { email, password },
-      config
-    );
-    dispatch({ type: USER_LOGIN_SUCCESS, payload: data });
-
-    localStorage.setItem("userInfo", JSON.stringify(data));
-  } catch (error) {
-    dispatch({
-      type: USER_LOGIN_FAIL,
-      payload:
-        error.response && error.response.data.message
-          ? error.response.data.message
-          : error.message,
-    });
-  }
+export const validateEmail = (email) => {
+  return email.match(
+    /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+  );
 };
 
-// LOGOUT
-export const logout = () => (dispatch) => {
-  localStorage.removeItem("userInfo");
-  dispatch({ type: USER_LOGOUT });
-  dispatch({ type: USER_DETAILS_RESET });
-};
 
-// REGISTER
-export const register = (name, email, password) => async (dispatch) => {
+// Register User
+export const registerUser = async (userData) => {
   try {
-    dispatch({ type: USER_REGISTER_REQUEST });
+    const response = await axios.post(
+      `${BACKEND_URL}/api/auth/signup`, userData,
+      { withCredentials: true });
 
-    const config = {
-      headers: {
-        "Content-Type": "application/json",
-      },
-    };
-
-    const { data } = await axios.post(
-      `/api/users`,
-      { name, email, password },
-      config
-    );
-    dispatch({ type: USER_REGISTER_SUCCESS, payload: data });
-    dispatch({ type: USER_LOGIN_SUCCESS, payload: data });
-
-    localStorage.setItem("userInfo", JSON.stringify(data));
-  } catch (error) {
-    dispatch({
-      type: USER_REGISTER_FAIL,
-      payload:
-        error.response && error.response.data.message
-          ? error.response.data.message
-          : error.message,
-    });
-  }
-};
-
-// USER DETAILS
-export const getUserDetails = (id) => async (dispatch, getState) => {
-  try {
-    dispatch({ type: USER_DETAILS_REQUEST });
-    const {
-      userLogin: { userInfo },
-    } = getState();
-
-    const config = {
-      headers: {
-        Authorization: `Bearer ${userInfo.token}`,
-      },
-    };
-
-    const { data } = await axios.get(`/api/users/${id}`, config);
-    dispatch({ type: USER_DETAILS_SUCCESS, payload: data });
+    if (response.statusText === "OK") {
+      toast.success("User Registered successfully");
+    }
+    return response.data;
   } catch (error) {
     const message =
-      error.response && error.response.data.message
-        ? error.response.data.message
-        : error.message;
-    if (message === "Not authorized, token failed") {
-      dispatch(logout());
-    }
-    dispatch({
-      type: USER_DETAILS_FAIL,
-      payload: message,
-    });
+      (error.response && error.response.data && error.response.data.message) ||
+      error.message ||
+      error.toString();
+    toast.error('message');
   }
 };
 
-// UPDATE PROFILE
-export const updateUserProfile = (user) => async (dispatch, getState) => {
+// Login User
+export const loginUser = async (userData) => {
+ 
+  
   try {
-    dispatch({ type: USER_UPDATE_PROFILE_REQUEST });
-
-    const {
-      userLogin: { userInfo },
-    } = getState();
-
-    const config = {
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${userInfo.token}`,
-      },
-    };
-
-    const { data } = await axios.put(`/api/users/profile`, user, config);
-    dispatch({ type: USER_UPDATE_PROFILE_SUCCESS, payload: data });
-    dispatch({ type: USER_LOGIN_SUCCESS, payload: data });
-
-    localStorage.setItem("userInfo", JSON.stringify(data));
+    const response = await axios.post(
+      `${BACKEND_URL}/api/auth/login`,
+      userData
+    );
+    if (response.statusText === "OK") {
+      toast.success("Login Successful...");
+    }
+    return response.data;
   } catch (error) {
     const message =
-      error.response && error.response.data.message
-        ? error.response.data.message
-        : error.message;
-    if (message === "Not authorized, token failed") {
-      dispatch(logout());
+      (error.response && error.response.data && error.response.data.message) ||
+      error.message ||
+      error.toString();
+    toast.error( message);
+  }
+
+  // try {
+  //   const response = await fetch(
+  //     `${BACKEND_URL}/api/auth/login`, {
+  //     method: 'POST',
+  //     headers: {
+  //       'Accept': 'application/json',
+  //       'Content-Type': 'application/json'
+  //     },
+  //     body: JSON.stringify(userData)
+  //   }
+  //   );
+
+  //   if (response.status === 200) {
+  //     let data = await response.json();
+     
+  //     return data
+  //   }
+  //   // if (response.statusText === "OK") {
+  //   //   toast.success("Login Successful...");
+  //   //    console.log(response.data)
+  //   // }
+  //   // return response.data;
+  // } catch (error) {
+  //   const message =
+  //     (error.response && error.response.data && error.response.data.message) ||
+  //     error.message ||
+  //     error.toString();
+  //   toast.error(message);
+  // }
+};
+
+// Logout User
+export const logoutUser = async () => {
+  try {
+    await fetch(`${BACKEND_URL}/api/auth/logout`);
+  } catch (error) {
+    const message =
+      (error.response && error.response.data && error.response.data.message) ||
+      error.message ||
+      error.toString();
+    toast.error(message);
+  }
+};
+
+// Forgot Password
+export const forgotPassword = async (userData) => {
+  try {
+    const response = await axios.post(
+      `/api/auth/forgotpassword`,
+      userData
+    );
+    toast.success(response.data.message);
+  } catch (error) {
+    const message =
+      (error.response && error.response.data && error.response.data.message) ||
+      error.message ||
+      error.toString();
+    toast.error(message);
+  }
+};
+
+// Reset Password
+export const resetPassword = async (userData, resetToken) => {
+  try {
+    const response = await axios.put(
+      `/api/auth/resetpassword/${resetToken}`,
+      userData
+    );
+    return response.data;
+  } catch (error) {
+    const message =
+      (error.response && error.response.data && error.response.data.message) ||
+      error.message ||
+      error.toString();
+    toast.error(message);
+  }
+};
+
+// Get Login Status
+export const getLoginStatus = async () => {
+  try {
+    const response = await fetch(`${BACKEND_URL}/api/auth/loggedin`);
+    return response.data;
+  } catch (error) {
+    const message =
+      (error.response && error.response.data && error.response.data.message) ||
+      error.message ||
+      error.toString();
+    toast.error(message);
+  }
+};
+// Get User Profile
+export const getUser = async () => {
+  try {
+    const response = await fetch(`/api/private/getuserdata`);
+    if (response.status === 200) {
+      let data = await response.json();
+      return data
     }
-    dispatch({
-      type: USER_UPDATE_PROFILE_FAIL,
-      payload: message,
-    });
+    // return response.data;
+  } catch (error) {
+    const message =
+      (error.response && error.response.data && error.response.data.message) ||
+      error.message ||
+      error.toString();
+    toast.error(message);
+  }
+};
+// Update Profile
+export const updateUser = async (formData) => {
+  try {
+    const response = await axios.patch(
+      `/api/private/updateuserdata`,
+      formData
+    );
+    return response.data;
+  } catch (error) {
+    const message =
+      (error.response && error.response.data && error.response.data.message) ||
+      error.message ||
+      error.toString();
+    toast.error(message);
+  }
+};
+// Update Profile
+export const changePassword = async (formData) => {
+  try {
+    const response = await axios.patch(
+      `/api/auth/changepassword`,
+      formData
+    );
+    return response.data;
+  } catch (error) {
+    const message =
+      (error.response && error.response.data && error.response.data.message) ||
+      error.message ||
+      error.toString();
+    toast.error(message);
   }
 };

@@ -1,41 +1,34 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { userdata } from "../../app/shared/userdata";
 
-const baseUrl = process.env.REACT_APP_BASEURLAPI;
-// console.log(baseUrl)
-
-export const fetchUsers = async () => {
-  const response = await fetch(baseUrl + "users");
-  if (!response.ok) {
-    return Promise.reject("Unable to fetch, status: " + response.status);
-  }
-
-  const data = await response.json();
-  console.log(data);
-  return data;
+const initialState = {
+  isLoading: false,
+  isSuccess: false,
+  isError: false,
+  message: "",
+  user: [],
 };
 
-export const usersSlice = createSlice({
-  name: "users",
-  initialState: { value: userdata },
+const authSlice = createSlice({
+  name: "auth",
+  initialState,
   reducers: {
-    adduser: (state, action) => {
-      state.value.push(action.payload);
+    SET_LOGIN(state, action) {
+      state.isLoggedIn = action.payload;
     },
+    SET_NAME(state, action) {
+      localStorage.setItem("user", JSON.stringify(action.payload));
+    },
+    SET_USER(state, action) {
+      state.user = ("get", action.payload)
+      console.log('action',   state.user)
 
-    deleteUser: (state, action) => {
-      state.value = state.value.filter((user) => user.id !== action.payload.id);
     },
-
-    updateUsername: (state, action) => {
-      state.value.map((user) => {
-        if (user.id === action.payload.id) {
-          user.userName = action.payload.userName;
-        }
-      });
-    },
-  },
+  }
 });
+export const { SET_LOGIN, SET_NAME, SET_USER } = authSlice.actions;
 
-export const { addUser, deleteUser, updateUsername } = usersSlice.actions;
-export default usersSlice.reducer;
+export const selectIsLoggedIn = (state) => state.auth.isLoggedIn;
+export const selectName = (state) => state.auth.name;
+export const selectUser = (state) => state.auth.user;
+
+export const authReducer = authSlice.reducer;

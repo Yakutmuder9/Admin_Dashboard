@@ -1,24 +1,19 @@
+import { Navigate, Outlet } from "react-router-dom";
 
-import { useSelector } from "react-redux";
-import { Navigate, Route } from "react-router-dom";
+const PrivateRoute = () => {
 
-function PrivateRoute({ component: Component, ...rest }) {
-  const userLogin = useSelector((state) => state.userLogin);
-  const { userInfo } = userLogin;
   return (
-    <Route 
-      {...rest}
-      component={(props) => {
-        const token = window.localStorage.getItem("userInfo");
-        if (userInfo && userInfo.isAdmin) {
-          return <Component {...props} />;
-        } else {
-          return <Navigate to={`/signin`} />;
-        }
-      }}
-    />
+
+    localStorage.getItem(localStorage.key("user")) ? (
+      <Outlet />
+    ) : (
+
+      <Navigate to="/" replace={true} />
+
+    )
+
   );
-}
+};
 
 export default PrivateRoute;
 

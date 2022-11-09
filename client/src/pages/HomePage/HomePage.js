@@ -136,7 +136,7 @@ const HomePage = () => {
         <About />
         <Service />
         <Projects />
-        <Footer />
+        <Footer /> 
     </div>
   );
 };

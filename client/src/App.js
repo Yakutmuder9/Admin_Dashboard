@@ -3,8 +3,11 @@ import "./App.css";
 import SignIn from "./pages/SignIn";
 import SignUp from "./pages/SignUp";
 import NotFound from "./pages/NotFound";
+import PrivateRoute from "./components/PrivateRoute";
 import HomePage from "./pages/HomePage/HomePage";
-import ProtectedRoute from "./components/PrivateRoute";
+import { ToastContainer } from "react-toastify";
+
+
 import Dashboard from "./pages/Dashboard";
 import Course from "./pages/main/course/Course"
 import Newcourse from "./pages/main/course/Newcourse/Newcourse"
@@ -21,315 +24,40 @@ import ResourcesDetail from "./pages/main/resources/ResourcesDetail";
 import Payment from "./pages/main/payment/payment";
 
 const App = () => {
-  const user = 1;
+  // console.log(process.env.REACT_APP_APIKEY)
   return (
     <div className="App">
-      <Routes>git add .
+      
+      <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="signin" element={<SignIn />} />
         <Route path="signup" element={<SignUp />} />
-        {user ? (
-          <Route
-            path="/"
-            element={
+        <Route path="forgotpassword" element={<SignIn />} />
+        <Route path="resetpassword/:resetToken" element={<SignIn />} />
 
-              <Dashboard authorised={true} />
 
-            }
-          >
-            <Route
-              path="dashboard"
-              exact
-              element={
-
-                <Dashactivity />
-
-              }
-            />
-            <Route
-              path="course"
-              element={
-
-                <Course />
-
-              }
-            />
-            <Route
-              path="course/:id"
-              element={
-
-                <Course />
-
-              }
-            />
-            <Route
-              path="newcourse"
-              element={
-
-                <Newcourse />
-
-              }
-            />
-            <Route
-              path="newcourse/:id"
-              element={
-
-                <NewcourseDetail />
-
-              }
-            />
-            <Route
-              path="cart"
-              element={
-
-                <Cart />
-
-              }
-            />
-
-            <Route
-              path="payment"
-              element={
-
-                <Payment />
-
-              }
-            />
-            <Route
-              path="event"
-              element={
-
-                <Event />
-
-              }
-            />
-            <Route
-              path="inbox"
-              element={
-
-                <Inbox />
-
-              }
-            />
-
-            <Route
-              path="assessment"
-              element={
-
-                <Assessment />
-
-              }
-            />
-            <Route
-              path="resources"
-              element={
-
-                <Resources />
-
-              }
-            />
-            <Route
-              path="resources/:id"
-              element={
-
-                <ResourcesDetail />
-
-              }
-            />
-            <Route
-              path="profile"
-              element={
-
-                <Profile />
-
-              }
-            />
-            <Route
-              path="support"
-              element={
-
-                <Support />
-
-              }
-            />
+        <Route element={<PrivateRoute />}>
+          <Route path="/" element={<Dashboard />}>
+            <Route path="dashboard" exact element={<Dashactivity />} />
+            <Route path="course" element={<Course />} />
+            <Route path="course/:id" element={<Course />} />
+            <Route path="newcourse" element={<Newcourse />} />
+            <Route path="newcourse/:id" element={<NewcourseDetail />} />
+            <Route path="cart" element={<Cart />} />
+            <Route path="payment" element={<Payment />} />
+            <Route path="event" element={<Event />} />
+            <Route path="inbox" element={<Inbox />} />
+            <Route path="assessment" element={<Assessment />} />
+            <Route path="resources" element={<Resources />} />
+            <Route path="resources/:id" element={<ResourcesDetail />} />
+            <Route path="profile" element={<Profile />} />
+            <Route path="support" element={<Support />} />
           </Route>
-        ) : (
-          // <Route path="*" element={<ErrorPage />} />
-
-          <Route
-            path="*"
-            element={
-              <div className="transition-page">
-                <div className="transtion-box">
-                  <span className="wave-item">ErrorPage</span>
-                  <span className="wave-item"></span>
-                  <span className="wave-item"></span>
-                  <span className="wave-item"></span>
-                  <span className="wave-item"></span>
-                </div>
-              </div>
-            }
-          />
-        )}
+        </Route>
         <Route path="*" element={<NotFound />} />
-
       </Routes>
-    </div>
-  );
+    </div >
+  )
 }
 
-export default App;
-
-
-
-
-{/* <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="signin" element={<SignIn />} />
-        <Route path="signup" element={<SignUp />} />
-        {user ? (
-            <Route
-              path="/"
-              element={
-                
-                  <Dashboard authorised={true} />
-                
-              }
-            >
-              <Route
-                path="dashboard" 
-                exact
-                element={
-                  
-                    <Dashactivity />
-                  
-                }
-              />
-              <Route
-                path="course" 
-                element={
-                  
-                    <Course />
-                  
-                }
-              />
-              <Route
-                path="course/:id" 
-                element={
-                  
-                    <Course />
-                  
-                }
-              />
-              <Route
-                path="newcourse" 
-                element={
-                  
-                    <Newcourse />
-                  
-                }
-              />
-              <Route
-                path="newcourse/:id" 
-                element={
-                  
-                    <NewcourseDetail />
-                  
-                }
-              />
-              <Route
-                path="cart"
-                element={
-                  
-                    <Cart />
-                  
-                }
-              />
-
-              <Route
-                path="payment"
-                element={
-                  
-                    <Payment />
-                  
-                }
-              />
-              <Route
-                path="event"
-                element={
-                  
-                    <Event />
-                  
-                }
-              />
-              <Route
-                path="inbox"
-                element={
-                  
-                    <Inbox />
-                  
-                }
-              />
-
-              <Route
-                path="assessment"
-                element={
-                
-                    <Assessment />
-                 
-                }
-              />
-              <Route
-                path="resources"
-                element={
-                
-                    <Resources />
-                 
-                }
-              />
-               <Route
-                path="resources/:id" 
-                element={
-                  
-                    <ResourcesDetail />
-                  
-                }
-              />
-              <Route
-                path="profile"
-                element={
-                 
-                    <Profile />
-                
-                }
-              />
-              <Route
-                path="support"
-                element={
-                 
-                    <Support />
-                
-                }
-              />
-            </Route>
-          ) : (
-          // <Route path="*" element={<ErrorPage />} />
-         
-            <Route
-              path="*"
-              element={
-                <div className="transition-page">
-                <div className="transtion-box">
-                  <span className="wave-item">ErrorPage</span>
-                  <span className="wave-item"></span>
-                  <span className="wave-item"></span>
-                  <span className="wave-item"></span>
-                  <span className="wave-item"></span>
-                </div>
-              </div>
-              }
-            />
-          )}
-        <Route path="*" element={<NotFound />}/>
-
-      </Routes> */}
+export default App
