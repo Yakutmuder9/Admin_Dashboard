@@ -297,7 +297,7 @@ const LoginPage = () => {
 
               <form className="needs-validation" onSubmit={handleSubmit}>
                 <div className="form-group  text-start">
-                  <label htmlhtmlFor="exampleInputEmail1" className="text-dark">
+                  <label htmlFor="exampleInputEmail1" className="text-dark">
                     Email address
                   </label>
                   <input
@@ -318,7 +318,7 @@ const LoginPage = () => {
                 </div>
                 <div className="form-group text-start">
                   <label
-                    htmlhtmlFor="exampleInputPassword1"
+                    htmlFor="exampleInputPassword1"
                     className="text-dark"
                   >
                     Password

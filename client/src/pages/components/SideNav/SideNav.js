@@ -5,11 +5,13 @@ import { FiArrowLeft, FiArrowRight } from "react-icons/fi";
 import "react-pro-sidebar/dist/css/styles.css";
 import DashLogo from "../../../app/assets/images/dashlogo.png"
 import './sideNav.css'
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
+import { logoutUser } from "../../../redux/features/users/userActions";
 
 const Sidebar = () => {
+  const navigate = useNavigate();
   const [dropdown, setDropdown] = useState([]);
   const [menuCollapse, setMenuCollapse] = useState(false);
 
@@ -26,6 +28,20 @@ const Sidebar = () => {
 
   //   getUsers();
   // }, []);
+
+
+   const handleLogout = async (e) => {
+    e.preventDefault();
+    // setFormErrors(validate(formValues));
+    // setIsSubmit(true);
+    try {
+      await logoutUser();
+      localStorage.removeItem('user')
+      navigate("/");
+    } catch (error) {
+      console.log("error.message");
+    }
+  };
   return (
     <div className={menuCollapse ? "sideNavCollapsed" : "sideNavOpend "}>
       <ProSidebar
@@ -144,7 +160,7 @@ const Sidebar = () => {
               <li className="menu-item ">
                 <NavLink
                   className="menu-link text-light d-flex align-items-center"
-                  to="/"
+                  to="/" onClick={handleLogout}
                 >
                   {menuCollapse ?
                     <span className="material-icons">logout</span> : <><span className="material-icons me-3">logout</span><span className="text">Log Out</span></>}

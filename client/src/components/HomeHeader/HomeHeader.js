@@ -1,6 +1,6 @@
 import { useState } from "react";
 import LoginPage from "../LoginModal/LoginModal";
-import "../../components/LoginModal/loginModal.css";
+import "../LoginModal/loginModal.css";
 import { Button, Modal, ModalHeader } from "reactstrap";
 import AppBar from '@mui/material/AppBar';
 import './header.css'
@@ -12,8 +12,8 @@ const Navbar = () => {
   const [menulist, setMenulist] = useState(false);
   window.addEventListener("scroll", navHandler);
   window.addEventListener("resize", menulistHandler);
-  
-  
+
+
   function navHandler() {
     if (window.scrollY >= 80) {
       setNavDark(true);
@@ -24,7 +24,7 @@ const Navbar = () => {
     }
   }
 
-  
+
 
   function menulistHandler() {
     if (window.screen.width <= 560) {
@@ -34,7 +34,7 @@ const Navbar = () => {
     }
   }
   return (
-    <nav  className={navDark? "navactive" : "rounded shadow-lg"} id='headerNav'>
+    <nav className={navDark ? "navactive" : "rounded shadow-lg"} id='headerNav'>
       <div className="logo">
         <h1 className="pt-1 text-white">MyDashbord</h1>
       </div>

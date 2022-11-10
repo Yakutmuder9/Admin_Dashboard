@@ -26,41 +26,7 @@ const Event = () => {
   return (
     <div className="" id="calenderBg">
       <div className="w-100 overflow-hidden d-flex px-3 rounded pt-2 pb-2 eventBox">
-        <div className="w-50 h-100  listEvent text-white">
-          <Button variant="contained">Add_Event</Button>
-          <div>
-            <div>
-              <label>
-                <input type="checkbox" />
-              </label>
-              <label className="ms-1 mt-4">View All</label>
-            </div>
-            <div>
-              <label>
-                <input type="checkbox" />
-              </label>
-              <label className="ms-1 my-1">Personal</label>
-            </div>
-            <div>
-              <label>
-                <input type="checkbox" />
-              </label>
-              <label className="ms-1 my-1">Business</label>
-            </div>
-            <div>
-              <label>
-                <input type="checkbox" />
-              </label>
-              <label className="ms-1 my-1">Family</label>
-            </div>
-            <div>
-              <label>
-                <input type="checkbox" />
-              </label>
-              <label className="ms-1 my-1 me-1">Hollydays</label>
-            </div>
-          </div>
-        </div>
+        
         <ScheduleComponent
           height="650px"
           currentView="Month"

@@ -93,14 +93,14 @@ const login = asyncHandler(async (req, res) => {
   res.cookie("token", token, {
     path: "/",
     httpOnly: true,
-    expires: new Date(Date.now() + 5 * 1000),
+    expires: new Date(Date.now() + 1000 * 86400),
   });
 
   if (user && passwordIsCorrect) {
     res.json({ ...user._doc, token }) 
   } else {
     res.status(400);
-    throw new Error("Invalid email or password");
+    throw new Error("Invalid email or password"); 
   }
 });
 
